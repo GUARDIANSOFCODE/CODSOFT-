@@ -1,9 +1,12 @@
 import json
 
+
 # File to store tasks
+
 TODO_FILE = "todo_list.json"
 
 # Load tasks from file
+
 def load_tasks():
     try:
         with open(TODO_FILE, "r") as file:
@@ -25,6 +28,7 @@ def add_task():
     print("Task added successfully!")
 
 # View all tasks
+
 def view_tasks():
     tasks = load_tasks()
     if not tasks:
@@ -36,6 +40,7 @@ def view_tasks():
             print(f"{idx}. {task['task']} [{status}]")
 
 # Update a task
+
 def update_task():
     tasks = load_tasks()
     view_tasks()
@@ -52,6 +57,7 @@ def update_task():
         print("Please enter a valid number.")
 
 # Mark a task as completed
+
 def complete_task():
     tasks = load_tasks()
     view_tasks()
@@ -67,6 +73,7 @@ def complete_task():
         print("Please enter a valid number.")
 
 # Delete a task
+
 def delete_task():
     tasks = load_tasks()
     view_tasks()
@@ -82,6 +89,7 @@ def delete_task():
         print("Please enter a valid number.")
 
 # Main menu
+
 def todo_list():
     while True:
         print("\nTo-Do List Menu:")
